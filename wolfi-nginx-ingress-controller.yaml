@@ -18,10 +18,10 @@ work-dir: /etc/nginx
 accounts:
   groups:
     - groupname: www-data
-      gid: 65532
+      gid: 82
   users:
     - username: www-data
-      uid: 65532
+      uid: 101
   run-as: www-data
 
 entrypoint:
@@ -32,19 +32,14 @@ cmd: /usr/bin/dumb-init ---
 paths:
   - path: /etc/ingress-controller
     type: directory
-    uid: 65532
-    gid: 65532
-    permissions: 0o700
+    uid: 101
+    gid: 82
+    permissions: 0o750
   - path: /tmp/nginx
     type: directory
-    uid: 65532
-    gid: 65532
-    permissions: 0o700
-  - path: /etc/nginx
-    type: directory
-    uid: 65532
-    gid: 65532
-    permissions: 0o700
+    uid: 101
+    gid: 82
+    permissions: 0o750
 
 environment:
   LUA_CPATH: /usr/lib/lua/5.1/?.so;/usr/lib/lua/?/?.so;/usr/lib/lua/?.so;/usr/lib/lua/?.lua;
