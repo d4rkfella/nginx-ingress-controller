@@ -29,19 +29,6 @@ entrypoint:
 
 cmd: /usr/bin/dumb-init ---
 
-paths:
-  - path: /run/nginx
-    type: directory
-    uid: 10000
-    gid: 10000
-    permissions: 0o755
-  - path: /etc/nginx/http.d/default.conf
-    type: hardlink
-    source: /usr/share/nginx/http-default_server.conf
-    uid: 10000
-    gid: 10000
-    permissions: 0o644
-
 environment:
   LUA_CPATH: /usr/lib/lua/5.1/?.so;/usr/lib/lua/?/?.so;/usr/lib/lua/?.so;/usr/lib/lua/?.lua;
   LUA_PATH: /usr/share/lua/5.1/?.lua;/usr/lib/lua/?.lua;/usr/lib/lua/?.lua;/usr/share/lua/?.lua
