@@ -27,8 +27,7 @@ accounts:
 entrypoint:
   command: /nginx-ingress-controller
 
-cmd:
-  command: /usr/bin/dumb-init ---
+cmd: /usr/bin/dumb-init ---
 
 paths:
   - path: /run/nginx
