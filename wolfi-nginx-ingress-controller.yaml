@@ -19,10 +19,10 @@ work-dir: /etc/nginx
 accounts:
   groups:
     - groupname: www-data
-      gid: 82
+      gid: 65532
   users:
     - username: www-data
-      uid: 101
+      uid: 65532
   run-as: www-data
 
 entrypoint:
@@ -33,20 +33,20 @@ cmd: /usr/bin/dumb-init ---
 paths:
   - path: /etc/ingress-controller
     type: directory
-    uid: 101
-    gid: 82
-    permissions: 0o750
+    uid: 65532
+    gid: 65532
+    permissions: 0o770
     recursive: true
   - path: /tmp/nginx
     type: directory
-    uid: 101
-    gid: 82
-    permissions: 0o750
+    uid: 65532
+    gid: 65532
+    permissions: 0o770
   - path: /etc/nginx
     type: directory
-    uid: 101
-    gid: 82
-    permissions: 0o750
+    uid: 65532
+    gid: 65532
+    permissions: 0o770
     recursive: true
   
 
