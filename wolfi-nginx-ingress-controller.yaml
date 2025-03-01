@@ -8,6 +8,7 @@ contents:
     - wolfi-baselayout
     - ingress-nginx-controller-1.12
     - ingress-nginx-controller-compat-1.12
+    - ingress-nginx-opentelemetry-plugin-1.12
     - heimdal-libs
     - icu-libs
     - libfontconfig1
