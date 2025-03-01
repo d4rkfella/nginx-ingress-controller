@@ -24,12 +24,9 @@ accounts:
       uid: 65532
   run-as: www-data
 
-entrypoint:
-  - /nginx-ingress-controller
+entrypoint: /nginx-ingress-controller
 
-cmd:
-  - /usr/bin/dumb-init
-  - ---
+cmd: /usr/bin/dumb-init ---
 
 paths:
   - path: /run/nginx
