@@ -25,11 +25,10 @@ accounts:
   run-as: www-data
 
 entrypoint:
-  - /nginx-ingress-controller
+  command: /nginx-ingress-controller
 
 cmd:
-  - /usr/bin/dumb-init
-  - ---
+  command: /usr/bin/dumb-init ---
 
 paths:
   - path: /run/nginx
