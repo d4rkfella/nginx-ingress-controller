@@ -35,6 +35,7 @@ paths:
     uid: 65532
     gid: 65532
     permissions: 0o750
+    recursive: true
   - path: /tmp/nginx
     type: directory
     uid: 65532
